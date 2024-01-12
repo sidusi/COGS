@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem name="Cost of Goods Sold" id="menu_root_cogs">
+        <menuitem id="menu_cogs_recipe" name="Recipe">
+            <menuitem id="cogs_recipe" name="Recipes" action="cogs.action_recipe"/>
+        </menuitem>
+        <menuitem id="menu_cogs_ingredients" name="Ingredients">
+            <menuitem id="cogs_ingredients" name="Recipe Ingredients" action="cogs.action_ingredient"/>
+            <menuitem id="cogs_ingredient_categories" name="Ingredient Categories" action="cogs.action_ingredient_categories"/>
+            <menuitem id="cogs_ingredient_uom" name="Ingredient UoM" action="cogs.action_ingredient_uom"/>
+        </menuitem>
+    </menuitem>
+</odoo>

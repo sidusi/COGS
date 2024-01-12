@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+    <!--   form view     -->
+            <record id="cogs_recipes_form_view" model="ir.ui.view">
+                <field name="name">cogs.recipes.form</field>
+                <field name="model">cogs.recipes</field>
+                <field name="arch" type="xml">
+                    <form>
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="recipe_categories"/>
+                                    <field name="netto"/>
+                                </group>
+                                <group>
+                                    <field name="uom"/>
+                                    <field name="subtotal"/>
+                                </group>
+                            </group>
+                            <notebook>
+                                <page string="Ingredients">
+                                    <field name="recipe_ingredient_ids">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="usage"/>
+                                            <field name="uom"/>
+                                            <field name="price"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+
+
+    <!--    Tree View    -->
+            <record id="cogs_recipes_tree_view" model="ir.ui.view">
+                <field name="name">cogs.recipes.tree</field>
+                <field name="model">cogs.recipes</field>
+                <field name="arch" type="xml">
+                    <tree>
+                        <field name="name"/>
+                        <field name="recipe_categories"/>
+                        <field name="netto"/>
+                        <field name="uom"/>
+                        <field name="subtotal"/>
+                    </tree>
+                </field>
+            </record>
+
+
+
+    <!--   Action     -->
+            <record id="action_recipe" model="ir.actions.act_window">
+                <field name="name">COGS Recipes</field>
+                <field name="res_model">cogs.recipes</field>
+                <field name="view_mode">tree,form</field>
+                <field name="view_id" ref="cogs_recipes_tree_view"/>
+                <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">
+                        Add Your Recipes
+                    </p>
+                </field>
+            </record>
+
+<!--    Recipes Ingredients Session    -->
+
+<!--   form view   -->
+
+            <record id="cogs_recipe_ingredient_form_view" model="ir.ui.view">
+                <field name="name">cogs.recipe.ingredients.form</field>
+                <field name="model">cogs.recipe.ingredients</field>
+                <field name="arch" type="xml">
+                    <form>
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="usage"/>
+                                </group>
+                                <group>
+                                    <field name="uom"/>
+                                    <field name="price"/>
+                                </group>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+
+    <!--   tree view     -->
+
+            <record id="cogs_recipe_ingredient_tree_view" model="ir.ui.view">
+                <field name="name">cogs.recipe.ingredients.tree</field>
+                <field name="model">cogs.recipe.ingredients</field>
+                <field name="arch" type="xml">
+                    <tree editable="bottom">
+                        <field name="name"/>
+                        <field name="usage"/>
+                        <field name="uom"/>
+                        <field name="price"/>
+                    </tree>
+                </field>
+            </record>
+
+
+    <!--   Action Recipes Ingredients     -->
+            <record id="action_recipe_ingredients" model="ir.actions.act_window">
+                    <field name="name">COGS Recipes Ingredients</field>
+                    <field name="res_model">cogs.recipe.ingredients</field>
+                    <field name="view_mode">tree,form</field>
+                    <field name="view_id" ref="cogs_recipe_ingredient_tree_view"/>
+                    <field name="help" type="html">
+                        <p class="o_view_nocontent_smiling_face">
+                            Add Your Recipes
+                        </p>
+                    </field>
+            </record>
+
+
+
+
+
+    </data>
+</odoo>
+

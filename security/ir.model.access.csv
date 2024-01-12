@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cogs_ingredients,access_cogs_ingredients,cogs.model_cogs_ingredients,base.group_user,1,1,1,1
+access_cogs_ingredients_category,access_cogs_ingredients_category,cogs.model_cogs_ingredient_categories,base.group_user,1,1,1,1
+access_cogs_ingredients_uom,access_cogs_ingredients_uom,cogs.model_cogs_ingredient_uom,base.group_user,1,1,1,1
+access_cogs_recipes,access_cogs_recipes,cogs.model_cogs_recipes,base.group_user,1,1,1,1
+access_cogs_recipe_categories,access_cogs_recipe_categories,cogs.model_cogs_recipe_categories,base.group_user,1,1,1,1
+access_cogs_recipe_ingredients,access_cogs_recipe_ingredients,cogs.model_cogs_recipe_ingredients,base.group_user,1,1,1,1

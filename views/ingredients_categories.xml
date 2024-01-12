@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+    <!--   form view     -->
+            <record id="cogs_ingredient_categories_form_view" model="ir.ui.view">
+                <field name="name">cogs.ingredients.categories.form</field>
+                <field name="model">cogs.ingredient.categories</field>
+                <field name="arch" type="xml">
+                    <form>
+                        <sheet>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+
+
+    <!--    Tree View    -->
+            <record id="cogs_ingredients_categories_tree_view" model="ir.ui.view">
+                <field name="name">cogs.ingredients.categories.tree</field>
+                <field name="model">cogs.ingredient.categories</field>
+                <field name="arch" type="xml">
+                    <tree editable="bottom">
+                        <field name="name"/>
+                    </tree>
+                </field>
+            </record>
+
+
+
+    <!--   Action     -->
+            <record id="action_ingredient_categories" model="ir.actions.act_window">
+                <field name="name">COGS Ingredients Categories</field>
+                <field name="res_model">cogs.ingredient.categories</field>
+                <field name="view_mode">tree,form</field>
+                <field name="view_id" ref="cogs_ingredients_categories_tree_view"/>
+                <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">
+                        Add Ingredients Category
+                    </p>
+                </field>
+            </record>
+    </data>
+</odoo>
+
