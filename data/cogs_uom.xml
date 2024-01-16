@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id="cogs_uom_kg" model="cogs.ingredient.uom">
+            <field name="code">kg</field>
+            <field name="name">Kilo Gram</field>
+        </record>
+
+        <record id="cogs_uom_gr" model="cogs.ingredient.uom">
+            <field name="code">gr</field>
+            <field name="name">Gram</field>
+        </record>
+
+        <record id="cogs_uom_sdm" model="cogs.ingredient.uom">
+            <field name="code">sdm</field>
+            <field name="name">Sendok Makan</field>
+        </record>
+
+        <record id="cogs_uom_lt" model="cogs.ingredient.uom">
+            <field name="code">lt</field>
+            <field name="name">Liter</field>
+        </record>
+
+
+    </data>
+</odoo>
